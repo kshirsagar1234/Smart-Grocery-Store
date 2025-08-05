@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    color: #ff6347; /* Change to your desired color */
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #ffa07a; /* Hover color change */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ff6347; /* Animation color */
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff6347; /* Hover text color */
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    margin-top: 60px; /* Adjust according to navbar height */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    padding: 15px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
